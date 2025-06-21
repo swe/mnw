@@ -1,0 +1,51 @@
+{% set currentLang = lang or 'en' %}
+{% set nav = {
+    en: {
+        home: { title: "Home", url: "/" },
+        about: { title: "About", url: "/about/" },
+        like: { title: "I Like", url: "/i-like/" },
+        hate: { title: "I Hate", url: "/i-hate/" },
+        blog: { title: "Blog", url: "/blog/" },
+        books: { title: "Books", url: "/books/" },
+        banners: { title: "Banners", url: "/banners/" },
+        photos: { title: "Photos", url: "/photos/" },
+        ai: { title: "AI Usage", url: "/ai-usage/" },
+        colophon: { title: "Colophon", url: "/colophon/" }
+    },
+    sv: {
+        home: { title: "Hem", url: "/sv/" },
+        about: { title: "Om mig", url: "/sv/about/" },
+        like: { title: "Jag gillar", url: "/sv/i-like/" },
+        hate: { title: "Jag hatar", url: "/sv/i-hate/" },
+        blog: { title: "Blogg", url: "/sv/blog/" },
+        books: { title: "Böcker", url: "/sv/books/" },
+        banners: { title: "Banners", url: "/sv/banners/" },
+        photos: { title: "Foton", url: "/sv/photos/" },
+        ai: { title: "AI-användning", url: "/sv/ai-usage/" },
+        colophon: { title: "Kolofon", url: "/sv/colophon/" }
+    },
+    fr: {
+        home: { title: "Accueil", url: "/fr/" },
+        about: { title: "À propos", url: "/fr/about/" },
+        like: { title: "J'aime", url: "/fr/i-like/" },
+        hate: { title: "Je déteste", url: "/fr/i-hate/" },
+        blog: { title: "Blog", url: "/fr/blog/" },
+        books: { title: "Livres", url: "/fr/books/" },
+        banners: { title: "Bannières", url: "/fr/banners/" },
+        photos: { title: "Photos", url: "/fr/photos/" },
+        ai: { title: "Usage IA", url: "/fr/ai-usage/" },
+        colophon: { title: "Colophon", url: "/fr/colophon/" }
+    }
+} %}
+
+<ul class="nav-menu">
+    {% for key, item in nav[currentLang] %}
+        <li class="nav-item">
+            <a href="{{ item.url }}"
+               class="nav-link{% if page.url == item.url %} nav-link--active{% endif %}"
+               {% if page.url == item.url %}aria-current="page"{% endif %}>
+                {{ item.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

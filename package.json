@@ -1,0 +1,17 @@
+{
+  "name": "Iván A. - Website",
+  "version": "1.0.0",
+  "description": "Personal website of Iván A.",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf dist"
+  },
+  "author": "Ivan A.",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "markdown-it": "^13.0.1"
+  },
+  "dependencies": {}
+}

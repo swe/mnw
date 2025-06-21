@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="{{ lang or 'en' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {%- if title -%}
+            {{ title }} - {{ site.title[lang] or site.title.en }}
+        {%- else -%}
+            {{ site.title[lang] or site.title.en }}
+        {%- endif -%}
+    </title>
+    <meta name="description" content="{{ description or site.description[lang] or site.description.en }}">
+    <meta name="author" content="{{ site.author }}">
+
+    <!-- Language alternates for SEO -->
+    {% for langCode, langData in site.languages %}
+    <link rel="alternate" hreflang="{{ langCode }}" href="{{ site.url }}{{ page.url | switchLang(lang, langCode) }}">
+    {% endfor %}
+
+    <!-- Basic CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Header with navigation -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="{% if lang == 'en' %}/{% else %}/{{ lang }}/{% endif %}" class="site-title">
+                    {{ site.title[lang] or site.title.en }}
+                </a>
+
+                <!-- Language switcher -->
+                <div class="lang-switcher">
+                    {% for langCode, langData in site.languages %}
+                        {% if langCode != lang %}
+                            <a href="{{ page.url | switchLang(lang, langCode) }}"
+                               class="lang-link"
+                               title="Switch to {{ langData.name }}">
+                                {{ langData.flag }} {{ langData.name }}
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Main navigation -->
+            <nav class="main-nav" role="navigation">
+                {% include "partials/navigation.njk" %}
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main id="main" class="main-content">
+        <div class="container">
+            {% if pageTitle %}
+                <header class="page-header">
+                    <h1>{{ pageTitle }}</h1>
+                    {% if pageDescription %}
+                        <p class="page-description">{{ pageDescription }}</p>
+                    {% endif %}
+                </header>
+            {% endif %}
+
+            {{ content | safe }}
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; {{ "now" | date("Y") }} {{ site.author }}. All rights reserved.</p>
+
+                {% if site.social %}
+                <div class="social-links">
+                    {% if site.social.email %}
+                        <a href="mailto:{{ site.social.email }}" title="Email">📧</a>
+                    {% endif %}
+                    {% if site.social.github %}
+                        <a href="https://github.com/{{ site.social.github }}" title="GitHub">🐙</a>
+                    {% endif %}
+                    {% if site.social.twitter %}
+                        <a href="https://twitter.com/{{ site.social.twitter }}" title="Twitter">🐦</a>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
