@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="{{ lang or 'en' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description or site.description[lang] or site.description.en }}">
+    <meta name="author" content="{{ site.author }}">
+
+    {% for langCode, langData in site.languages %}
+    <link rel="alternate" hreflang="{{ langCode }}" href="{{ site.url }}{{ page.url | switchLang(lang, langCode) }}">
+    {% endfor %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+</head>
+<body>
+    <!-- Top header with site title and language switcher -->
+    <div class="top-header">
+        <a href="/" class="site-title-link">IVÁN A. — SECURITY ENGINEER</a>
+        <div class="home-lang-switcher">
+            {% for langCode, langData in site.languages %}
+                {% if langCode == (lang or 'en') %}
+                    <span class="home-lang-current">{{ langData.flag }}</span>
+                {% else %}
+                    <a href="{{ page.url | switchLang(lang, langCode) }}"
+                       class="home-lang-link"
+                       title="Switch to {{ langData.name }}">
+                        {{ langData.flag }}
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <main id="main" class="main-content">
+        <div class="library-container">
+            <!-- Library Header -->
+            <header class="library-header">
+                <h1>Library</h1>
+            </header>
+
+            <!-- Get books from collection -->
+            {% set books = collections.library %}
+
+            <!-- Debug: Show what we found -->
+            <!-- Debug info (remove in production):
+                 Collections available: {{ collections | keys | join(', ') }}
+                 Library collection exists: {{ 'library' in collections }}
+                 Number of books: {{ books | length if books else 'undefined' }}
+            -->
+
+            {% set uniqueCategories = books | getUniqueCategories if books else [] %}
+            {% set topCategories = books | getTopCategories(5) if books else [] %}
+
+            <!-- Category Filter Pills -->
+            <div class="library-filters">
+                <button class="filter-pill filter-pill--active" data-category="all">All</button>
+
+                <!-- Create filter buttons for all categories -->
+                {% for category in uniqueCategories %}
+                    {% set categorySlug = category | categorySlug %}
+                    {% set isTopCategory = false %}
+                    {% set topIndex = 0 %}
+
+                    {% for topCat in topCategories %}
+                        {% if topCat.name == category %}
+                            {% set isTopCategory = true %}
+                            {% set topIndex = loop.index %}
+                        {% endif %}
+                    {% endfor %}
+
+                    <button class="filter-pill{% if isTopCategory %} filter-pill--top{% endif %}"
+                            data-category="{{ categorySlug }}"
+                            data-category-name="{{ category }}"
+                            {% if isTopCategory %}data-top-index="{{ topIndex }}"{% endif %}>
+                        {{ category }}
+                    </button>
+                {% endfor %}
+            </div>
+
+            <!-- Year and Count - Simplified approach -->
+            {% if books and books.length > 0 %}
+                {% set currentDisplayYear = books[0].data.year or ("now" | date("Y")) %}
+            {% else %}
+                {% set currentDisplayYear = "now" | date("Y") %}
+            {% endif %}
+            {% set totalBooks = books | length %}
+
+            <!-- Books List - Grouped by Year with Top-Level Year Display -->
+            <div class="library-books">
+                {% if books and books | length > 0 %}
+                    {% set yearGroups = books | groupByYear %}
+                    {% set sortedYears = yearGroups | keys | sort | reverse %}
+
+                    {% for year in sortedYears %}
+                        {% set yearBooks = yearGroups[year] %}
+
+                        <!-- Year Section -->
+                        <div class="year-section">
+                            <h3 class="year-header">
+                                {{ year }}
+                                <span class="year-count-pill">{{ yearBooks | length }}</span>
+                            </h3>
+
+                            <!-- Books for this year -->
+                            <div class="year-books-grid">
+                                {% for book in yearBooks %}
+                                <div class="book-item{% if book.data.favorite %} book-item--favorite{% endif %}"
+                                     data-category="{{ book.data.category | categorySlug if book.data.category else 'uncategorized' }}"
+                                     data-rating="{{ book.data.rating or 0 }}"
+                                     data-year="{{ book.data.year }}">
+                                    <div class="book-main">
+                                        <h4 class="book-title">{{ book.data.title or 'Untitled' }}</h4>
+                                        <p class="book-author">{{ book.data.author or 'Unknown Author' }}</p>
+                                        {% if book.content and book.content.trim() | length > 0 %}
+                                        <p class="book-description">{{ book.content | striptags | truncate(200) }}</p>
+                                        {% endif %}
+                                    </div>
+                                    <div class="book-meta">
+                                        {% if book.data.category %}
+                                            {% set categorySlug = book.data.category | categorySlug %}
+                                            {% set isTopCategory = false %}
+                                            {% set topIndex = 0 %}
+
+                                            {% for topCat in topCategories %}
+                                                {% if topCat.name == book.data.category %}
+                                                    {% set isTopCategory = true %}
+                                                    {% set topIndex = loop.index %}
+                                                {% endif %}
+                                            {% endfor %}
+
+                                            <span class="book-category{% if isTopCategory %} top-category-{{ topIndex }}{% endif %}">
+                                                {{ book.data.category }}
+                                            </span>
+                                        {% endif %}
+
+                                        {% if book.data.rating %}
+                                        <div class="book-rating">
+                                            {% for i in range(1, 6) %}
+                                                <span class="star{% if i <= (book.data.rating | int) %} star--filled{% endif %}">★</span>
+                                            {% endfor %}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="book-item">
+                        <div class="book-main">
+                            <h3 class="book-title">No books found</h3>
+                            <p class="book-author">
+                                {% if collections.library %}
+                                    Collection exists but is empty ({{ collections.library | length }} items)
+                                {% else %}
+                                    Library collection not found. Available collections: {{ collections | keys | join(', ') }}
+                                {% endif %}
+                            </p>
+                            <p class="book-description">Add some books to src/library/ with proper frontmatter to get started</p>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Enhanced Library filtering functionality - with year section support
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-pill');
+            const bookItems = document.querySelectorAll('.book-item');
+            const yearSections = document.querySelectorAll('.year-section');
+
+            // Count books by category for display
+            const categoryCount = {};
+            bookItems.forEach(book => {
+                const category = book.getAttribute('data-category');
+                if (category) {
+                    categoryCount[category] = (categoryCount[category] || 0) + 1;
+                }
+            });
+
+            // Filter functionality
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+
+                    // Update active filter button
+                    filterButtons.forEach(btn => btn.classList.remove('filter-pill--active'));
+                    this.classList.add('filter-pill--active');
+
+                    let visibleCount = 0;
+
+                    // Filter books and show/hide year sections
+                    yearSections.forEach(section => {
+                        const booksInSection = section.querySelectorAll('.book-item');
+                        let visibleInSection = 0;
+
+                        booksInSection.forEach(book => {
+                            if (category === 'all' || book.getAttribute('data-category') === category) {
+                                book.classList.remove('book-item--hidden');
+                                book.classList.add('book-item--visible');
+                                visibleInSection++;
+                                visibleCount++;
+                            } else {
+                                book.classList.remove('book-item--visible');
+                                book.classList.add('book-item--hidden');
+                            }
+                        });
+
+                        // Show/hide entire year section based on visible books
+                        if (visibleInSection > 0) {
+                            section.style.display = 'block';
+                            // Update year count pill
+                            const yearCountPill = section.querySelector('.year-count-pill');
+                            if (yearCountPill) {
+                                if (category === 'all') {
+                                    yearCountPill.textContent = `${booksInSection.length}`;
+                                } else {
+                                    yearCountPill.textContent = `${visibleInSection}`;
+                                }
+                            }
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+
+                    // Update main book count display
+                    const countDisplay = document.querySelector('.book-count');
+                    if (countDisplay) {
+                        if (category === 'all') {
+                            countDisplay.textContent = `${totalBooks}`;
+                        } else {
+                            const categoryName = this.getAttribute('data-category-name') || category;
+                            countDisplay.textContent = `${visibleCount} in ${categoryName}`;
+                        }
+                    }
+                });
+            });
+
+            // Debug logging
+            console.log('Library page loaded with', bookItems.length, 'books in', yearSections.length, 'year sections');
+            console.log('Categories found:', Object.keys(categoryCount));
+        });
+    </script>
+</body>
+</html>

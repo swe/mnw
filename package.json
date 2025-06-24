@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "description": "Personal website of Iván A.",
   "scripts": {
-    "dev": "eleventy --serve",
-    "build": "eleventy",
+    "start": "eleventy --serve --config=.eleventy.js",
+    "build": "eleventy --config=.eleventy.js",
     "clean": "rm -rf dist"
   },
+  "keywords": [],
   "author": "Ivan A.",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "markdown-it": "^13.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "node-fetch": "^3.3.0"
+  }
 }

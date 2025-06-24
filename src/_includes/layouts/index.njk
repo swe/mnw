@@ -15,26 +15,30 @@
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 </head>
 <body>
-    <!-- Top header with site title and language switcher -->
-    <div class="top-header">
-        <a href="/" class="site-title-link">IVÁN A. — SECURITY ENGINEER</a>
-        <div class="home-lang-switcher">
-            {% for langCode, langData in site.languages %}
-                {% if langCode == (lang or 'en') %}
-                    <span class="home-lang-current">{{ langData.flag }}</span>
-                {% else %}
-                    <a href="{{ page.url | switchLang(lang, langCode) }}"
-                       class="home-lang-link"
-                       title="Switch to {{ langData.name }}">
-                        {{ langData.flag }}
-                    </a>
-                {% endif %}
-            {% endfor %}
-        </div>
+    <!-- Language switcher at the very top -->
+    <div class="home-lang-switcher">
+        {% for langCode, langData in site.languages %}
+            {% if langCode == (lang or 'en') %}
+                <span class="home-lang-current">{{ langData.flag }}</span>
+            {% else %}
+                <a href="{{ page.url | switchLang(lang, langCode) }}"
+                   class="home-lang-link"
+                   title="Switch to {{ langData.name }}">
+                    {{ langData.flag }}
+                </a>
+            {% endif %}
+        {% endfor %}
     </div>
 
     <main id="main" class="main-content">
         <article class="home-layout">
+            <header class="home-header">
+                <div class="logo">
+                    <img src="https://i.alleksy.com/projects/wpslogo.png" alt="Logo" style="width: 50px; height: auto;">
+                </div>
+                <h1>{{ title }}</h1>
+            </header>
+
             <section class="home-content">
                 {{ content | safe }}
             </section>
