@@ -1,5 +1,4 @@
 module.exports = function(eleventyConfig) {
-    // A reusable filter for switching languages
     eleventyConfig.addFilter("switchLang", function(url, currentLang, targetLang) {
         if (targetLang === 'en') {
             // Remove the current language prefix if it exists

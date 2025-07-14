@@ -74,19 +74,19 @@ Voici une liste organisée de choses que j'aime vraiment et que j'utilise dans m
     </div>
     <div class="use-items">
       <div class="use-item">
-        <a href="https://proton.me/">ProtonMail</a> &middot; fournisseur d'email
+        <a href="https://proton.me/">ProtonMail</a> &nbsp;&middot; fournisseur d'email
       </div>
       <div class="use-item">
-        <a href="https://telegram.org/">Telegram</a> &middot; messagerie
+        <a href="https://telegram.org/">Telegram</a> &nbsp;&middot; messagerie
       </div>
       <div class="use-item">
-        <a href="https://tailscale.com/">Tailscale</a> &middot; VPN mais différent
+        <a href="https://tailscale.com/">Tailscale</a> &nbsp;&middot; VPN mais différent
       </div>
       <div class="use-item">
-        <a href="https://kino.pub/">Kino.pub</a> &middot; films en ligne etc.
+        <a href="https://kino.pub/">Kino.pub</a> &nbsp;&middot; films en ligne etc.
       </div>
       <div class="use-item">
-        <a href="https://m.do.co/c/815b044e19b0">DigitalOcean</a> &middot; fournisseur cloud
+        <a href="https://m.do.co/c/815b044e19b0">DigitalOcean</a> &nbsp;&middot; fournisseur cloud
       </div>
     </div>
   </div>
@@ -134,10 +134,10 @@ Voici une liste organisée de choses que j'aime vraiment et que j'utilise dans m
         Bons livres
       </div>
       <div class="use-item">
-        <a href="https://masterclass.com">Masterclass</a> &middot; cours en ligne
+        <a href="https://masterclass.com">Masterclass</a> &nbsp;&middot; cours en ligne
       </div>
       <div class="use-item">
-        <a href="https://coursera.com">Coursera</a> &middot; cours en ligne
+        <a href="https://coursera.com">Coursera</a> &nbsp;&middot; cours en ligne
       </div>
       <div class="use-item">
         Podcasts
@@ -177,4 +177,4 @@ Voici une liste organisée de choses que j'aime vraiment et que j'utilise dans m
 </div>
 
 ---
-— [À propos](/fr/about/). [Je déteste](/fr/hate/). Un peu de [fun](/fr/fun/). 
+— [À propos](/fr/whoami/). [Je déteste](/fr/hate/). Un peu de [fun](/fr/fun/). 

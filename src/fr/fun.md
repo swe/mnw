@@ -25,4 +25,4 @@ J'aime créer des choses et suivre des choses.
 </div>
 
 ---
-— [À propos](/fr/about/). 
+— [À propos](/fr/whoami/). 

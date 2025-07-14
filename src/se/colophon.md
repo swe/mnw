@@ -44,4 +44,4 @@ Denna webbplats förkroppsligar japansk minimalism och skandinavisk enkelhet. Ja
 Färgpaletten hämtar från naturliga material: pappersvitt, kolgrått och subtila accenttoner. Typografi är läsbar och oträngande, vilket låter innehållet tala för sig självt.
 
 ---
-— [Om mig](/sv/about/). Lite [kul](/sv/fun/). Jag [läser](/library/). 
+— [Om mig](/sv/whoami/). Lite [kul](/sv/fun/). Jag [läser](/library/). 

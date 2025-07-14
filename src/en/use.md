@@ -74,19 +74,19 @@ This is a curated list of things I genuinely like and use in my daily life. Some
     </div>
     <div class="use-items">
       <div class="use-item">
-        <a href="https://proton.me/">ProtonMail</a> &middot; email provider
+        <a href="https://proton.me/">ProtonMail</a> &nbsp;&middot; email provider
       </div>
       <div class="use-item">
-        <a href="https://telegram.org/">Telegram</a> &middot; messenger
+        <a href="https://telegram.org/">Telegram</a> &nbsp;&middot; messenger
       </div>
       <div class="use-item">
-        <a href="https://tailscale.com/">Tailscale</a> &middot; VPN but different
+        <a href="https://tailscale.com/">Tailscale</a> &nbsp;&middot; VPN but different
       </div>
       <div class="use-item">
-        <a href="https://kino.pub/">Kino.pub</a> &middot; online movies etc.
+        <a href="https://kino.pub/">Kino.pub</a> &nbsp;&middot; online movies etc.
       </div>
       <div class="use-item">
-        <a href="https://m.do.co/c/815b044e19b0">DigitalOcean</a> &middot; cloud provider
+        <a href="https://m.do.co/c/815b044e19b0">DigitalOcean</a> &nbsp;&middot; cloud provider
       </div>
     </div>
   </div>
@@ -134,10 +134,10 @@ This is a curated list of things I genuinely like and use in my daily life. Some
         Good Books
       </div>
       <div class="use-item">
-        <a href="https://masterclass.com">Masterclass</a> &middot; online courses
+        <a href="https://masterclass.com">Masterclass</a> &nbsp;&middot; online courses
       </div>
       <div class="use-item">
-        <a href="https://coursera.com">Coursera</a> &middot; online courses
+        <a href="https://coursera.com">Coursera</a> &nbsp;&middot; online courses
       </div>
       <div class="use-item">
         Podcasts

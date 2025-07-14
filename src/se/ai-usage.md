@@ -27,4 +27,4 @@ Om detta någonsin förändras kommer jag att säga det. Här: [alleksy.com/ai](
 
 
 ---
-— [Om mig](/sv/about/). Lite [kul](/sv/fun/). Jag [läser](/library/). 
+— [Om mig](/sv/whoami/). Lite [kul](/sv/fun/). Jag [läser](/library/). 

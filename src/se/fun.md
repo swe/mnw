@@ -25,4 +25,4 @@ Jag gillar att göra saker och spåra saker.
 </div>
 
 ---
-— [Om mig](/sv/about/). 
+— [Om mig](/sv/whoami/). 

@@ -74,19 +74,19 @@ Detta är en kuraterad lista över saker jag verkligen gillar och använder i mi
     </div>
     <div class="use-items">
       <div class="use-item">
-        <a href="https://proton.me/">ProtonMail</a> &middot; e-postleverantör
+        <a href="https://proton.me/">ProtonMail</a> &nbsp;&middot; e-postleverantör
       </div>
       <div class="use-item">
-        <a href="https://telegram.org/">Telegram</a> &middot; meddelandetjänst
+        <a href="https://telegram.org/">Telegram</a> &nbsp;&middot; meddelandetjänst
       </div>
       <div class="use-item">
-        <a href="https://tailscale.com/">Tailscale</a> &middot; VPN men annorlunda
+        <a href="https://tailscale.com/">Tailscale</a> &nbsp;&middot; VPN men annorlunda
       </div>
       <div class="use-item">
-        <a href="https://kino.pub/">Kino.pub</a> &middot; filmer online m.m.
+        <a href="https://kino.pub/">Kino.pub</a> &nbsp;&middot; filmer online m.m.
       </div>
       <div class="use-item">
-        <a href="https://m.do.co/c/815b044e19b0">DigitalOcean</a> &middot; molnleverantör
+        <a href="https://m.do.co/c/815b044e19b0">DigitalOcean</a> &nbsp;&middot; molnleverantör
       </div>
     </div>
   </div>
@@ -134,10 +134,10 @@ Detta är en kuraterad lista över saker jag verkligen gillar och använder i mi
         Bra böcker
       </div>
       <div class="use-item">
-        <a href="https://masterclass.com">Masterclass</a> &middot; onlinekurser
+        <a href="https://masterclass.com">Masterclass</a> &nbsp;&middot; onlinekurser
       </div>
       <div class="use-item">
-        <a href="https://coursera.com">Coursera</a> &middot; onlinekurser
+        <a href="https://coursera.com">Coursera</a> &nbsp;&middot; onlinekurser
       </div>
       <div class="use-item">
         Podcasts
@@ -177,4 +177,4 @@ Detta är en kuraterad lista över saker jag verkligen gillar och använder i mi
 </div>
 
 ---
-— [Om mig](/sv/about/). [Jag hatar](/sv/hate/). Lite [kul](/sv/fun/). 
+— [Om mig](/sv/whoami/). [Jag hatar](/sv/hate/). Lite [kul](/sv/fun/). 

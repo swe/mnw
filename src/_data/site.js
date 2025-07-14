@@ -31,7 +31,7 @@ module.exports = {
     defaultLanguage: "en",
     social: {
         twitter: "@iamalleksy",
-        github: "iamalleksy",
+        github: "swe",
         email: "hello@alleksy.com"
     }
 };

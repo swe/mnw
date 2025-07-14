@@ -26,4 +26,4 @@ Mais les mots sont les miens.
 Si cela change un jour, je le dirai ici : [alleksy.com/ai](https://alleksy.com/ai)
 
 ---
-— [À propos](/fr/about/). Un peu de [fun](/fr/fun/). Je [lis](/library/). 
+— [À propos](/fr/whoami/). Un peu de [fun](/fr/fun/). Je [lis](/library/). 

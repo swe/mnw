@@ -12,4 +12,4 @@ Vit à <span class="city-flag" data-flag="🇨🇦">Vancouver</span>. Il est act
 Travaille chez [Svalbard Security](https://svalbard.ca). Prépare du café V60, étudie le français. Photographie arbres, eau, montagnes, ciel. Apprend le minimalisme, pratique l'attention.
 
 ---
-— [À propos](/fr/about/). Un peu de [fun](/fr/fun/). Je [lis](/library/). 
+— [À propos](/fr/whoami/). Un peu de [fun](/fr/fun/). Je [lis](/library/). 

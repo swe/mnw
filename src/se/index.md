@@ -13,4 +13,4 @@ Arbetar på [Svalbard Security](https://svalbard.ca). Brygger V60-kaffe, studera
 
 
 ---
-— [Om mig](/sv/about/). Lite [kul](/sv/fun/). Jag [läser](/library/). 
+— [Om mig](/sv/whoami/). Lite [kul](/sv/fun/). Jag [läser](/library/). 

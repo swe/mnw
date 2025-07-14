@@ -206,4 +206,4 @@ Listan är ofullständig, kontinuerligt uppdaterad.
 </div>
 
 ---
-— [Om mig](/sv/about/). [Jag gillar](/sv/use/). Lite [kul](/sv/fun/). 
+— [Om mig](/sv/whoami/). [Jag gillar](/sv/use/). Lite [kul](/sv/fun/). 

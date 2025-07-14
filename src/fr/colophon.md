@@ -44,4 +44,4 @@ Ce site incarne le minimalisme japonais et la simplicité scandinave. J'aime uti
 La palette de couleurs s'inspire des matériaux naturels : blancs papier, gris charbon et touches subtiles. La typographie est lisible et discrète, laissant le contenu s'exprimer.
 
 ---
-— [À propos](/fr/about/). Un peu de [fun](/fr/fun/). Je [lis](/library/). 
+— [À propos](/fr/whoami/). Un peu de [fun](/fr/fun/). Je [lis](/library/). 

@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 title: Iván A. - Om mig
 lang: sv
-permalink: /sv/about/
+permalink: /sv/whoami/
 ---
 
 ## Det här är vem jag verkligen är

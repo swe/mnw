@@ -206,4 +206,4 @@ Liste incomplète, continuellement mise à jour.
 </div>
 
 ---
-— [À propos](/fr/about/). [J'aime](/fr/use/). Un peu de [fun](/fr/fun/). 
+— [À propos](/fr/whoami/). [J'aime](/fr/use/). Un peu de [fun](/fr/fun/). 

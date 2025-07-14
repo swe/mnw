@@ -1,6 +1,3 @@
-// src/_data/books.js
-// This creates a global data file that can be accessed as {{ books }} in templates
-
 module.exports = async function() {
     try {
         console.log("📚 Fetching books from external API...");
@@ -14,7 +11,7 @@ module.exports = async function() {
             fetch = nodeFetch.default;
         }
 
-        const response = await fetch('https://raw.githubusercontent.com/swe/jsoncsvdata/refs/heads/master/books.json');
+        const response = await fetch('https://api.alleksy.com/v1/all_books');
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);

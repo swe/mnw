@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 title: Iván A. - À propos
 lang: fr
-permalink: /fr/about/
+permalink: /fr/whoami/
 ---
 
 ## Qui je suis vraiment
