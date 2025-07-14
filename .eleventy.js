@@ -6,7 +6,9 @@ module.exports = function(eleventyConfig) {
             const langPrefixRegex = new RegExp(`^/(${Object.keys(require('./src/_data/site.js').languages).join('|')})/`);
             url = url.replace(langPrefixRegex, '/');
         } else {
-            // Add the target language prefix
+            // First remove any existing language prefix, then add the target language prefix
+            const langPrefixRegex = new RegExp(`^/(${Object.keys(require('./src/_data/site.js').languages).join('|')})/`);
+            url = url.replace(langPrefixRegex, '/');
             url = `/${targetLang}${url}`;
         }
         return url;
@@ -65,6 +67,8 @@ module.exports = function(eleventyConfig) {
                 rating: book.rating,
                 year: book.year,
                 link: book.link,
+                cover_url: book.cover_url,
+                description: book.description,
                 permalink: false
             },
             content: book.description || '',
@@ -207,7 +211,7 @@ module.exports = function(eleventyConfig) {
     });
 
     // Filter to get top categories by count
-    eleventyConfig.addFilter("getTopCategories", function(books, limit = 5) {
+    eleventyConfig.addFilter("getTopCategories", function(books, limit = 3) {
         const categoryCount = {};
 
         // Count books per category
@@ -239,6 +243,12 @@ module.exports = function(eleventyConfig) {
     // Filter to strip HTML tags
     eleventyConfig.addFilter("striptags", function(text) {
         return text.replace(/<[^>]*>/g, '');
+    });
+
+    // Filter to replace text
+    eleventyConfig.addFilter("replace", function(text, search, replace) {
+        if (!text) return text;
+        return text.replace(new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), replace);
     });
 
     // Filter to group books by year

@@ -8,9 +8,7 @@ permalink: /whoami/
 ## This is who I really am
 
 **Online:** [gh/swe](https://github.com/swe) · [li/iamalleksy](https://linkedin.com/in/iamalleksy) · [ig/iamalleksy_](https://instagram.com/iamalleksy_) · [tw/iamalleksy](https://x.com/iamalleksy) · [md/iamalleksy](https://mastodon.social/@iamalleksy) · [hello@alleksy.com](mailto:hello@alleksy.com)
-
-**Offline:** [Speaker](/speaker/) · [Résumé](https://i.alleksy.com/docs/work/resume_ivan-aleksandrov.pdf) · [Strava](https://www.strava.com/athletes/10659571)
-
+**Offline:** [Résumé](https://i.alleksy.com/docs/work/resume_ivan-aleksandrov.pdf) · [Strava](https://www.strava.com/athletes/10659571)
 **Preferences:** [I like](/use/) · [I hate](/hate/)
 
 ### Dry facts

@@ -1,24 +1,24 @@
 ---
 layout: layouts/base.njk
-title: I Like
-pageTitle: Things I Like
-pageDescription: A curated list of things that bring me joy, inspiration, and wonder
-lang: en
-permalink: /use/
+title: J'aime
+pageTitle: Choses que j'aime
+pageDescription: Une liste organisée de choses qui m'apportent joie, inspiration et émerveillement
+lang: fr
+permalink: /fr/use/
 ---
 
 <div class="use-page">
 
-### Things I Like & Use
+### Choses que j'aime & utilise
 
 <p class="use-intro">
-This is a curated list of things I genuinely like and use in my daily life. Some of the links below are affiliate links, which means if you purchase something through them, you'll be supporting my work and activities at no extra cost to you.
+Voici une liste organisée de choses que j'aime vraiment et que j'utilise dans ma vie quotidienne. Certains liens ci-dessous sont des liens d'affiliation, ce qui signifie que si vous achetez quelque chose via eux, vous soutenez mon travail et mes activités sans coût supplémentaire pour vous.
 </p>
 
 <div class="use-grid">
   <div class="use-category use-category--large">
     <div class="use-category-header">
-      <h4>Tech & Gear</h4>
+      <h4>Tech & Matériel</h4>
     </div>
     <div class="use-items">
       <div class="use-item">
@@ -31,7 +31,7 @@ This is a curated list of things I genuinely like and use in my daily life. Some
         <a href="https://amzn.to/44PJPfe">Amazon Kindle Paperwhite</a>
       </div>
       <div class="use-item">
-        <a href="https://amzn.to/40LWz55">Pro-Ject T1 Turntable</a>
+        <a href="https://amzn.to/40LWz55">Pro-Ject T1 Platine Vinyle</a>
       </div>
       <div class="use-item">
         <a href="https://amzn.to/46D636v">Bang & Olufsen H95</a>
@@ -40,7 +40,7 @@ This is a curated list of things I genuinely like and use in my daily life. Some
         <a href="https://amzn.to/3GJNYsT">Yubico YubiKey 5C</a>
       </div>
       <div class="use-item">
-        Apple Watch 6 Stainless Steel
+        Apple Watch 6 Acier Inoxydable
       </div>
       <div class="use-item">
         <a href="https://www.tissotwatches.com/en-ca/T1494621101100.html">Tissot PR516</a>
@@ -56,14 +56,14 @@ This is a curated list of things I genuinely like and use in my daily life. Some
 
   <div class="use-category">
     <div class="use-category-header">
-      <h4>Apps & Software</h4>
+      <h4>Applications & Logiciels</h4>
     </div>
     <div class="use-items">
       <div class="use-item">
         <a href="https://brave.com/">Brave Browser</a>
       </div>
       <div class="use-item">
-        Apple Mail / Notes / Calendar / Maps
+        Apple Mail / Notes / Calendrier / Plans
       </div>
     </div>
   </div>
@@ -74,47 +74,47 @@ This is a curated list of things I genuinely like and use in my daily life. Some
     </div>
     <div class="use-items">
       <div class="use-item">
-        <a href="https://proton.me/">ProtonMail</a> &middot; email provider
+        <a href="https://proton.me/">ProtonMail</a> &middot; fournisseur d'email
       </div>
       <div class="use-item">
-        <a href="https://telegram.org/">Telegram</a> &middot; messenger
+        <a href="https://telegram.org/">Telegram</a> &middot; messagerie
       </div>
       <div class="use-item">
-        <a href="https://tailscale.com/">Tailscale</a> &middot; VPN but different
+        <a href="https://tailscale.com/">Tailscale</a> &middot; VPN mais différent
       </div>
       <div class="use-item">
-        <a href="https://kino.pub/">Kino.pub</a> &middot; online movies etc.
+        <a href="https://kino.pub/">Kino.pub</a> &middot; films en ligne etc.
       </div>
       <div class="use-item">
-        <a href="https://m.do.co/c/815b044e19b0">DigitalOcean</a> &middot; cloud provider
+        <a href="https://m.do.co/c/815b044e19b0">DigitalOcean</a> &middot; fournisseur cloud
       </div>
     </div>
   </div>
 
   <div class="use-category">
     <div class="use-category-header">
-      <h4>Food & Drink</h4>
+      <h4>Nourriture & Boissons</h4>
     </div>
     <div class="use-items">
       <div class="use-item">
-        V60 Coffee
+        Café V60
       </div>
       <div class="use-item">
         Kappa Maki
       </div>
       <div class="use-item">
-        Fresh Fruits
+        Fruits frais
       </div>
     </div>
   </div>
 
   <div class="use-category">
     <div class="use-category-header">
-      <h4>Beverages</h4>
+      <h4>Boissons</h4>
     </div>
     <div class="use-items">
       <div class="use-item">
-        Red Dry Wine
+        Vin rouge sec
       </div>
       <div class="use-item">
         Coca Cola
@@ -127,17 +127,17 @@ This is a curated list of things I genuinely like and use in my daily life. Some
 
   <div class="use-category">
     <div class="use-category-header">
-      <h4>Books & Learning</h4>
+      <h4>Livres & Apprentissage</h4>
     </div>
     <div class="use-items">
       <div class="use-item">
-        Good Books
+        Bons livres
       </div>
       <div class="use-item">
-        <a href="https://masterclass.com">Masterclass</a> &middot; online courses
+        <a href="https://masterclass.com">Masterclass</a> &middot; cours en ligne
       </div>
       <div class="use-item">
-        <a href="https://coursera.com">Coursera</a> &middot; online courses
+        <a href="https://coursera.com">Coursera</a> &middot; cours en ligne
       </div>
       <div class="use-item">
         Podcasts
@@ -147,11 +147,11 @@ This is a curated list of things I genuinely like and use in my daily life. Some
 
   <div class="use-category">
     <div class="use-category-header">
-      <h4>Fitness & Lifestyle</h4>
+      <h4>Fitness & Style de vie</h4>
     </div>
     <div class="use-items">
       <div class="use-item">
-        Running
+        Course à pied
       </div>
       <div class="use-item">
         Powerlifting
@@ -161,14 +161,14 @@ This is a curated list of things I genuinely like and use in my daily life. Some
 
   <div class="use-category">
     <div class="use-category-header">
-      <h4>Entertainment</h4>
+      <h4>Divertissement</h4>
     </div>
     <div class="use-items">
       <div class="use-item">
-        Classical Music
+        Musique classique
       </div>
       <div class="use-item">
-        Boardgames
+        Jeux de société
       </div>
     </div>
   </div>
@@ -177,4 +177,4 @@ This is a curated list of things I genuinely like and use in my daily life. Some
 </div>
 
 ---
-— [About me](/whoami/). [I hate](/hate/). Some [fun](/fun/).
+— [À propos](/fr/about/). [Je déteste](/fr/hate/). Un peu de [fun](/fr/fun/). 

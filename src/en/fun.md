@@ -7,13 +7,22 @@ lang: en
 permalink: /fun/
 ---
 
+<div class="fun-page">
+
 ## Having Fun
 
 I like to make things and track things.
 
-- This site's [Colophon](/colophon/). 
-- Things [I like](/use/). 
-- Things [I hate](/hate/). 
-- [AI Usage](/ai/) on this website, an all my projects. 
-- The [books I've read](/library/). 
-- Some [photos](/photos/), I captured, and want to share.
+<ul class="minimal-list">
+<li>This site's <a href="/colophon/">Colophon</a></li>
+<li>Things <a href="/use/">I like</a></li>
+<li>Things <a href="/hate/">I hate</a></li>
+<li><a href="/ai/">AI Usage</a> on this website, an all my projects</li>
+<li>The <a href="/library/">books I've read</a></li>
+<li style="display: none">Some <a href="/photos/">photos</a>, I captured, and want to share</li>
+</ul>
+
+</div>
+
+---
+— [About me](/whoami/).

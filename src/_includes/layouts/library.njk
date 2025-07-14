@@ -21,8 +21,8 @@
 <body>
     <!-- Top header with site title and language switcher -->
     <div class="top-header">
-        <a href="/" class="site-title-link">IVÁN A. — SECURITY ENGINEER</a>
-        <div class="home-lang-switcher">
+        <a href="{% if lang == 'sv' %}/sv/{% elif lang == 'fr' %}/fr/{% else %}/{% endif %}" class="site-title-link">IVÁN A. — SECURITY ENGINEER</a>
+        <!-- <div class="home-lang-switcher">
             {% for langCode, langData in site.languages %}
                 {% if langCode == (lang or 'en') %}
                     <span class="home-lang-current">{{ langData.flag }}</span>
@@ -34,7 +34,7 @@
                     </a>
                 {% endif %}
             {% endfor %}
-        </div>
+        </div> -->
     </div>
 
     <main id="main" class="main-content">
@@ -55,7 +55,7 @@
             -->
 
             {% set uniqueCategories = books | getUniqueCategories if books else [] %}
-            {% set topCategories = books | getTopCategories(5) if books else [] %}
+            {% set topCategories = books | getTopCategories(3) if books else [] %}
 
             <!-- Category Filter Pills -->
             <div class="library-filters">
@@ -113,12 +113,20 @@
                                 <div class="book-item{% if book.data.favorite %} book-item--favorite{% endif %}"
                                      data-category="{{ book.data.category | categorySlug if book.data.category else 'uncategorized' }}"
                                      data-rating="{{ book.data.rating or 0 }}"
-                                     data-year="{{ book.data.year }}">
+                                     data-year="{{ book.data.year }}"
+                                     data-title="{{ book.data.title | escape }}"
+                                     data-author="{{ book.data.author | escape }}"
+                                     data-category-label="{{ book.data.category | escape }}"
+                                     data-rating-value="{{ book.data.rating or 0 }}"
+                                     data-year-label="{{ book.data.year }}"
+                                     data-cover-url="{{ book.data.cover_url | escape }}"
+                                     data-description="{{ book.data.description | escape }}"
+                                     tabindex="0">
                                     <div class="book-main">
                                         <h4 class="book-title">{{ book.data.title or 'Untitled' }}</h4>
                                         <p class="book-author">{{ book.data.author or 'Unknown Author' }}</p>
-                                        {% if book.content and book.content.trim() | length > 0 %}
-                                        <p class="book-description">{{ book.content | striptags | truncate(200) }}</p>
+                                        {% if book.data.description %}
+                                        <p class="book-description">{{ book.data.description | striptags | truncate(200) | replace('\n', ' ') }}</p>
                                         {% endif %}
                                     </div>
                                     <div class="book-meta">
@@ -170,6 +178,34 @@
             </div>
         </div>
     </main>
+
+    <!-- Book Detail Modal -->
+    <div id="book-modal" class="book-modal" aria-modal="true" role="dialog" tabindex="-1" style="display:none;">
+      <div class="book-modal__overlay" id="book-modal-overlay"></div>
+      <div class="book-modal__content" role="document">
+        <!-- Modal Header -->
+        <div class="book-modal__header">
+          <h3 class="book-modal__header-title" id="book-modal-header-title"></h3>
+        <button class="book-modal__close" id="book-modal-close" aria-label="Close">&times;</button>
+        </div>
+        <div class="book-modal__body">
+          <img class="book-modal__cover" id="book-modal-cover" src="" alt="Book cover" loading="lazy" />
+          <h2 class="book-modal__title" id="book-modal-title"></h2>
+          <p class="book-modal__author" id="book-modal-author"></p>
+          <div class="book-modal__meta">
+            <span class="book-modal__category" id="book-modal-category"></span>
+            <span class="book-modal__rating" id="book-modal-rating"></span>
+          </div>
+          <div class="book-modal__description" id="book-modal-description"></div>
+        </div>
+        
+        <!-- Modal Footer -->
+        <div class="book-modal__footer">
+          <img class="book-modal__footer-image" src="/assets/img/TransparentGradient.png" alt="Footer decoration" />
+        </div>
+
+      </div>
+    </div>
 
     <script>
         // Enhanced Library filtering functionality - with year section support
@@ -248,6 +284,148 @@
             // Debug logging
             console.log('Library page loaded with', bookItems.length, 'books in', yearSections.length, 'year sections');
             console.log('Categories found:', Object.keys(categoryCount));
+        });
+
+        // Modal logic for book details
+        document.addEventListener('DOMContentLoaded', function() {
+          const modal = document.getElementById('book-modal');
+          const modalOverlay = document.getElementById('book-modal-overlay');
+          const modalClose = document.getElementById('book-modal-close');
+          const modalBody = document.querySelector('.book-modal__body');
+          const headerTitle = document.getElementById('book-modal-header-title');
+          const cover = document.getElementById('book-modal-cover');
+          const title = document.getElementById('book-modal-title');
+          const author = document.getElementById('book-modal-author');
+          const category = document.getElementById('book-modal-category');
+          const rating = document.getElementById('book-modal-rating');
+          const year = document.getElementById('book-modal-year');
+          const description = document.getElementById('book-modal-description');
+
+          function openModal(bookData) {
+            cover.src = bookData.coverUrl || '';
+            cover.alt = bookData.title || 'Book cover';
+            title.textContent = bookData.title || '';
+            author.textContent = bookData.author || '';
+            
+            // Set header title
+            headerTitle.textContent = bookData.title || '';
+            headerTitle.classList.remove('visible');
+            
+            // Category coloring logic
+            category.textContent = bookData.category || '';
+            category.className = 'book-modal__category';
+            // Try to match top-category color if present on tile
+            const tile = Array.from(document.querySelectorAll('.book-item')).find(el => el.getAttribute('data-title') === bookData.title);
+            if (tile) {
+              const catSpan = tile.querySelector('.book-category');
+              if (catSpan) {
+                // Copy all top-category-* classes
+                catSpan.classList.forEach(cls => {
+                  if (cls.startsWith('top-category-')) {
+                    category.classList.add(cls);
+                  }
+                });
+                // Copy inline style if any (for custom backgrounds)
+                if (catSpan.style.background) {
+                  category.style.background = catSpan.style.background;
+                }
+                if (catSpan.style.color) {
+                  category.style.color = catSpan.style.color;
+                }
+                if (catSpan.style.border) {
+                  category.style.border = catSpan.style.border;
+                }
+              }
+            }
+            // Render stars for rating
+            let stars = '';
+            for (let i = 1; i <= 5; i++) {
+              let starClass = 'star';
+              if (i <= (bookData.rating || 0)) {
+                starClass += ' star--filled';
+                if ((bookData.rating || 0) === 5) starClass += ' star--gold';
+              }
+              stars += `<span class=\"${starClass}\">★</span>`;
+            }
+            rating.innerHTML = stars;
+            
+            // Process description to handle line breaks
+            let processedDescription = bookData.description || '';
+            if (processedDescription.includes('\n')) {
+                // Split by newlines and create separate <p> tags
+                const paragraphs = processedDescription.split('\n').filter(p => p.trim() !== '');
+                description.innerHTML = ''; // Clear existing content
+                paragraphs.forEach(paragraph => {
+                    const p = document.createElement('p');
+                    p.textContent = paragraph.trim();
+                    description.appendChild(p);
+                });
+            } else {
+                // No line breaks, use textContent for safety
+                description.textContent = processedDescription;
+            }
+            
+            modal.style.display = 'block';
+            setTimeout(() => { modal.classList.add('open'); }, 10);
+            document.body.style.overflow = 'hidden';
+          }
+
+          function closeModal() {
+            modal.classList.remove('open');
+            setTimeout(() => { modal.style.display = 'none'; }, 200);
+            document.body.style.overflow = '';
+            // Reset header title
+            headerTitle.classList.remove('visible');
+          }
+
+          // Scroll detection for header title
+          function handleModalScroll() {
+            if (modalBody) {
+              const scrollTop = modalBody.scrollTop;
+              const coverTop = cover.offsetTop;
+              const headerHeight = 60; // Approximate header height
+              
+              // Show title when cover is scrolled out of view
+              if (scrollTop > coverTop - headerHeight) {
+                headerTitle.classList.add('visible');
+              } else {
+                headerTitle.classList.remove('visible');
+              }
+            }
+          }
+
+          // Add scroll event listener to modal body
+          if (modalBody) {
+            modalBody.addEventListener('scroll', handleModalScroll);
+          }
+
+          document.querySelectorAll('.book-item').forEach(item => {
+            item.addEventListener('click', function() {
+              openModal({
+                coverUrl: this.getAttribute('data-cover-url'),
+                title: this.getAttribute('data-title'),
+                author: this.getAttribute('data-author'),
+                category: this.getAttribute('data-category-label'),
+                rating: parseInt(this.getAttribute('data-rating-value'), 10) || 0,
+                year: this.getAttribute('data-year-label'),
+                description: this.getAttribute('data-description')
+              });
+            });
+            item.addEventListener('keydown', function(e) {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+              }
+            });
+          });
+
+          modalClose.addEventListener('click', closeModal);
+          modalOverlay.addEventListener('click', closeModal);
+          document.addEventListener('keydown', function(e) {
+            if (modal.style.display === 'block' && (e.key === 'Escape' || e.key === 'Esc')) {
+              closeModal();
+            }
+          });
         });
     </script>
 </body>

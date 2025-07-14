@@ -7,63 +7,203 @@ lang: en
 permalink: /hate/
 ---
 
-## Things That Drive Me Crazy 😤
+<div class="use-page">
 
-Let's be honest - some things in this world are just poorly designed, unnecessarily complicated, or downright annoying. This isn't about spreading negativity, but rather about identifying problems that could (and should) be solved better. Consider this constructive criticism from someone who cares about good design and user experience.
+### Things That Drive Me Crazy
 
-### 1. **Websites That Auto-Play Videos** 🔇
-Nothing kills the browsing experience faster than sudden, unexpected audio blasting from a website. It's 2025 - we should know better by now.
+<p class="use-intro">
+This is a curated list of things that frustrate or annoy me in design, technology, and daily life. It’s meant to be constructive criticism, not just negativity.
+</p>
 
-### 2. **Subscription Services for Everything** 💸
-When did we decide that every single app, service, and tool needs to be a monthly subscription? Sometimes I just want to buy something once and own it.
+<div class="use-grid">
+  <div class="use-category">
+    <div class="use-category-header">
+      <h4>Food</h4>
+    </div>
+    <div class="use-items">
+      <div class="use-item">Green beans</div>
+      <div class="use-item">Boiled onions</div>
+      <div class="use-item">Celery</div>
+      <div class="use-item">Capers</div>
+      <div class="use-item">Herring</div>
+      <div class="use-item">Hematogen bars</div>
+      <div class="use-item">Eggplant spread</div>
+      <div class="use-item">Aspic (meat jelly)</div>
+      <div class="use-item">Chocolatey things: pastries, cakes, and ice cream</div>
+    </div>
+  </div>
 
-### 3. **Confirmation Emails That Arrive Hours Later** ⏰
-You've just made a purchase or signed up for something, and then you wait... and wait... for a confirmation that should be instant. It's not 1995 anymore.
+  <div class="use-category">
+    <div class="use-category-header">
+      <h4>Drinks</h4>
+    </div>
+    <div class="use-items">
+      <div class="use-item">Instant coffee</div>
+      <div class="use-item">Beer</div>
+      <div class="use-item">Tequila</div>
+      <div class="use-item">Sweet, semi-sweet, and white wine</div>
+      <div class="use-item">Pepsi</div>
+      <div class="use-item">Any vegetable juice</div>
+      <div class="use-item">Sweet kefir</div>
+    </div>
+  </div>
 
-### 4. **Printers (All of Them)** 🖨️
-They never work when you need them most. The ink is always low. The paper jams. The drivers are mysteriously corrupted. It's like they're designed to fail.
+  <div class="use-category">
+    <div class="use-category-header">
+      <h4>Daily Life</h4>
+    </div>
+    <div class="use-items">
+      <div class="use-item">When people wrap the TV remote in plastic</div>
+      <div class="use-item">When dishes are towel-dried after washing</div>
+      <div class="use-item">When brooms are soaked in the toilet</div>
+      <div class="use-item">Brushing teeth with soap</div>
+      <div class="use-item">Leaving the toothpaste uncapped</div>
+      <div class="use-item">When someone gets annoyed by the position of the toilet seat</div>
+      <div class="use-item">Walking down the street drinking beer</div>
+      <div class="use-item">Pants with buttons instead of a zipper</div>
+    </div>
+  </div>
 
-### 5. **Websites That Break the Back Button** ⬅️
-Few things are more frustrating than clicking back and finding yourself trapped in some weird navigation loop or redirect chain. Respect the back button!
+  <div class="use-category">
+    <div class="use-category-header">
+      <h4>Culture</h4>
+    </div>
+    <div class="use-items">
+      <div class="use-item">Disco</div>
+      <div class="use-item">Country music</div>
+      <div class="use-item">Televised stage plays</div>
+      <div class="use-item">Karaoke</div>
+      <div class="use-item">When popcorn is almost gone but ads before the movie still go on</div>
+      <div class="use-item">Nightclubs</div>
+      <div class="use-item">Dance floors</div>
+      <div class="use-item">Formal banquets</div>
+      <div class="use-item">Receptions</div>
+      <div class="use-item">Buffets</div>
+      <div class="use-item">Launch parties</div>
+    </div>
+  </div>
 
-### 6. **Forced App Downloads for Basic Web Tasks** 📱
-"For the best experience, download our app!" No, thank you. I just want to check your menu or store hours. Your mobile website should work perfectly fine.
+  <div class="use-category">
+    <div class="use-category-header">
+      <h4>Metaphysical</h4>
+    </div>
+    <div class="use-items">
+      <div class="use-item">Feng Shui</div>
+      <div class="use-item">Occultism</div>
+      <div class="use-item">Astrology</div>
+      <div class="use-item">Anything that starts with “para-”</div>
+    </div>
+  </div>
 
-### 7. **Email Newsletters I Never Signed Up For** 📧
-Somehow my email ended up on seventeen different marketing lists, and each unsubscribe process requires PhD-level detective work to complete.
+  <div class="use-category">
+    <div class="use-category-header">
+      <h4>City</h4>
+    </div>
+    <div class="use-items">
+      <div class="use-item">Air conditioners sticking out of building facades</div>
+      <div class="use-item">Plastic-frame double-glazed windows</div>
+    </div>
+  </div>
 
-### 8. **Parking Meters That Only Accept Exact Change** 🪙
-In an age of contactless payments, requiring exact coins feels like a deliberate inconvenience. Modernize your payment systems!
+  <div class="use-category">
+    <div class="use-category-header">
+      <h4>Superlatives</h4>
+    </div>
+    <div class="use-items">
+      <div class="use-item">The word “elite”</div>
+      <div class="use-item">The word “exclusive”</div>
+      <div class="use-item">The word “VIP”</div>
+    </div>
+  </div>
 
-### 9. **Software That Updates and Changes Everything** 🔄
-You finally learn where all the features are, and then an update completely reorganizes the interface. Looking at you, every major software company.
+  <div class="use-category">
+    <div class="use-category-header">
+      <h4>On Women</h4>
+    </div>
+    <div class="use-items">
+      <div class="use-item">Lipstick</div>
+      <div class="use-item">Powder</div>
+      <div class="use-item">Blush</div>
+      <div class="use-item">Mini-skirts</div>
+    </div>
+  </div>
 
-### 10. **Captchas That Are Impossible to Solve** 🤖
-"Select all the traffic lights" - but what about that tiny corner of a light in the adjacent square? Are motorcycles vehicles? These things are harder than advanced calculus.
+  <div class="use-category">
+    <div class="use-category-header">
+      <h4>Internet</h4>
+    </div>
+    <div class="use-items">
+      <div class="use-item">When a link opens a new window without asking</div>
+      <div class="use-item">When a banner leads somewhere completely unrelated</div>
+      <div class="use-item">Chats</div>
+      <div class="use-item">WhatsApp</div>
+      <div class="use-item">Forums</div>
+      <div class="use-item">SEO people and optimization specialists</div>
+      <div class="use-item">“Back to top” links on websites</div>
+      <div class="use-item">Pop-ups, with or without ads</div>
+      <div class="use-item">Animated GIFs</div>
+      <div class="use-item">Flash clips where something just moves around endlessly</div>
+    </div>
+  </div>
 
-### 11. **Websites That Require Password Complexity Rules** 🔒
-Must contain 12 characters, 3 numbers, 2 symbols, 1 uppercase, 1 lowercase, your mother's maiden name, and the tears of a unicorn. Then they store it in plain text anyway.
+  <div class="use-category">
+    <div class="use-category-header">
+      <h4>Computers</h4>
+    </div>
+    <div class="use-items">
+      <div class="use-item">When people don’t use the numeric keypad</div>
+      <div class="use-item">When a file made last year won’t open, and you can’t even Undo</div>
+      <div class="use-item">Loud fan noise</div>
+    </div>
+  </div>
 
-### 12. **Phone Calls That Could Have Been Emails** ☎️
-"Hey, quick question..." followed by a 30-minute conversation that could have been resolved with a two-sentence email. Respect people's time and communication preferences.
+  <div class="use-category">
+    <div class="use-category-header">
+      <h4>Emails</h4>
+    </div>
+    <div class="use-items">
+      <div class="use-item">Email “letters” on fake stationery with images</div>
+      <div class="use-item">Replies quoting the entire message, not just the relevant part</div>
+      <div class="use-item">Reply chains that keep the mailing list footer</div>
+    </div>
+  </div>
 
-### 13. **Social Media Algorithm Bubble Chambers** 🫧
-Platforms that show you the same type of content over and over, creating echo chambers instead of exposing you to new ideas and perspectives.
+  <div class="use-category">
+    <div class="use-category-header">
+      <h4>Mobile Phones</h4>
+    </div>
+    <div class="use-items">
+      <div class="use-item">Any ringtone you can actually hear (especially polyphonic ones)</div>
+    </div>
+  </div>
 
-### 14. **Public WiFi With Fake Connection** 📶
-Three bars of signal, connected to "FreeWiFi," but every webpage leads to a login portal that never actually works. Just be honest about your internet situation.
+  <div class="use-category">
+    <div class="use-category-header">
+      <h4>Sounds</h4>
+    </div>
+    <div class="use-items">
+      <div class="use-item">People chewing loudly on the phone</div>
+      <div class="use-item">Alarm clocks that simulate birds or ocean waves</div>
+      <div class="use-item">Microwave beeping more than once</div>
+      <div class="use-item">Keyboard click sounds turned on</div>
+    </div>
+  </div>
 
-### 15. **Customer Service Chatbots That Can't Help** 🤖
-"I understand your frustration, but I can only help with basic questions." Translation: "I'm here to prevent you from talking to a human who could actually solve your problem."
+  <div class="use-category">
+    <div class="use-category-header">
+      <h4>General</h4>
+    </div>
+    <div class="use-items">
+      <div class="use-item">Using brand name instead of product name</div>
+      <div class="use-item">Android devices</div>
+    </div>
+  </div>
+</div>
+
+<br />
+List is incomplete, continuously updated.
+
+</div>
 
 ---
-
-*Important note: This list comes from a place of caring about good design and user experience. I believe most of these problems exist because of poor planning, not malicious intent. With better attention to user needs, many of these frustrations could be eliminated.*
-
-### The Flip Side
-
-For every item on this list, there's usually a company or designer who has solved the problem elegantly. That's what gives me hope - when someone cares enough to get it right, these problems can be fixed.
-
-### Got Your Own Frustrations?
-
-I'm sure you have your own list of things that drive you crazy. If you want to commiserate or share your own design pet peeves, feel free to [reach out](mailto:hello@alleksy.com). Sometimes it helps to know we're not alone in our frustrations!
+— [About me](/whoami/). [I like](/use/). Some [fun](/fun/).

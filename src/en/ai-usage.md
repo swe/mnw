@@ -7,110 +7,24 @@ lang: en
 permalink: /ai/
 ---
 
-## AI as a Creative Partner 🤖
+## AI usage
 
-I believe in transparency when it comes to using artificial intelligence in creative work. This page documents how, when, and why I use AI tools, along with my philosophy about human-AI collaboration.
+Uses generative AI (mostly [Claude.ai](https://claude.ai)), for research and for learning new tools and validating ideas. The way search engines once worked, before noise replaced signal.
 
-### My AI Philosophy
+Writes without AI. No emails. No notes. No drafts. No books. No comments. Nothing that claims to be mine is written by anyone — or anything — else.
 
-I view AI as a **creative partner** rather than a replacement for human creativity. The best results come from thoughtful collaboration between human intuition and AI capabilities. I always maintain creative control and ownership of my work.
+Believes in the act of writing. Of thinking by hand. Of shaping words slowly. "It’s about being, not having."
 
-### Tools I Use
+Uses AI to explain code. SQL, Python, Go, JavaScript. Small functions. Educational. Adapted by hand before use.
 
-Here are the AI tools that are part of my creative toolkit:
+Asks questions while writing. Like asking a friend nearby.
+“What is impossible to prove but shapes belief?”
+“Which trades still use a physical toolbox?”
 
-#### **Writing & Content**
-- **Claude (Anthropic)** - For brainstorming, editing, and refining ideas
-- **ChatGPT** - Research assistance and content structuring
-- **Grammarly** - Grammar and style improvement
+But the words are mine.
 
-#### **Design & Visual**
-- **Midjourney** - Concept exploration and visual inspiration
-- **DALL-E** - Quick mockups and ideation
-- **Runway ML** - Video editing and enhancement
+If this ever changes, I will say so. Here: [alleksy.com/ai](https://alleksy.com/ai)
 
-#### **Code & Development**
-- **GitHub Copilot** - Code completion and debugging assistance
-- **Claude** - Architecture discussions and code review
-- **Cursor** - AI-powered coding environment
-
-### How I Use AI
-
-#### **Ideation & Brainstorming**
-AI helps me explore ideas I might not have considered. I use it to:
-- Generate multiple perspectives on a problem
-- Explore creative directions
-- Research topics quickly
-- Challenge my assumptions
-
-#### **First Drafts & Prototypes**
-AI accelerates my initial creative process:
-- Writing first drafts that I then heavily edit
-- Creating rough prototypes to test concepts
-- Generating placeholder content
-- Exploring visual concepts
-
-#### **Refinement & Editing**
-AI helps polish my work:
-- Suggesting improvements to writing
-- Catching errors I might miss
-- Optimizing code performance
-- Enhancing visual compositions
-
-### What AI Doesn't Do
-
-It's important to note what AI **doesn't** handle in my process:
-
-- **Final Creative Decisions** - All creative choices are mine
-- **Strategic Thinking** - I set the direction and goals
-- **Personal Voice** - My perspective and experiences shape everything
-- **Quality Control** - I review and approve all AI-generated content
-- **Ethical Considerations** - I make all decisions about appropriateness
-
-### Disclosure Policy
-
-I believe in being transparent about AI usage:
-
-#### **When I Always Disclose**
-- AI-generated images or graphics
-- Significantly AI-assisted writing
-- AI-created code that forms a substantial part of a project
-
-#### **When I Don't Typically Disclose**
-- Grammar and spell-checking
-- Minor code completion
-- Research assistance that I then verify independently
-- Brainstorming sessions that lead to original ideas
-
-### Ethical Guidelines
-
-My approach to AI is guided by these principles:
-
-1. **Transparency** - Be open about AI usage when relevant
-2. **Originality** - Ensure all work reflects my unique perspective
-3. **Responsibility** - Verify AI-generated information
-4. **Respect** - Honor the work of human creators
-5. **Privacy** - Never input sensitive or private information
-
-### The Human Element
-
-Despite using AI tools, the most important element of my work remains fundamentally human:
-
-- **Curiosity** drives my questions and explorations
-- **Experience** shapes how I interpret and use AI suggestions
-- **Intuition** guides my creative decisions
-- **Values** determine what I choose to create and share
-
-### Looking Forward
-
-AI technology evolves rapidly, and so does my approach to using it. I regularly reassess my tools and methods to ensure they align with my values and enhance rather than replace human creativity.
-
-I'm excited about the future of human-AI collaboration and believe we're just beginning to explore what's possible when technology amplifies human creativity.
 
 ---
-
-*This page is updated regularly as my AI usage evolves. Last updated: {{ "now" | date("Y-m-d") }}*
-
-### Questions?
-
-If you have questions about my AI usage or want to discuss human-AI collaboration, feel free to [reach out](mailto:hello@alleksy.com). I'm always happy to discuss this fascinating intersection of technology and creativity.
+— [About me](/whoami/). Some [fun](/fun/). I'm [reading](/library/).

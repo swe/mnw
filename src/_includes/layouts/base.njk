@@ -11,13 +11,16 @@
     <link rel="alternate" hreflang="{{ langCode }}" href="{{ site.url }}{{ page.url | switchLang(lang, langCode) }}">
     {% endfor %}
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 </head>
 <body>
     <!-- Top header with site title and language switcher -->
     <div class="top-header">
-        <a href="/" class="site-title-link">IVÁN A. — SECURITY ENGINEER</a>
+        <a href="{% if lang == 'sv' %}/sv/{% elif lang == 'fr' %}/fr/{% else %}/{% endif %}" class="site-title-link">IVÁN A. — SECURITY ENGINEER</a>
         <div class="home-lang-switcher">
             {% for langCode, langData in site.languages %}
                 {% if langCode == (lang or 'en') %}

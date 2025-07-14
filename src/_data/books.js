@@ -26,6 +26,14 @@ module.exports = async function() {
 
         const booksData = JSON.parse(rawText);
 
+        // Process descriptions to handle <br /> tags
+        booksData.forEach(book => {
+            if (book.description && typeof book.description === 'string') {
+                // Convert <br /> tags to line breaks
+                book.description = book.description.replace(/<br \/>/g, '\n');
+            }
+        });
+
         console.log(`📖 Successfully fetched ${booksData.length} books from API`);
 
         return booksData;
@@ -35,7 +43,7 @@ module.exports = async function() {
         console.log("📝 Using fallback local data");
 
         // Fallback to local data if API fails
-        return [
+        const fallbackData = [
             {
                 "title": "Alice's Adventures in Wonderland",
                 "author": "Lewis Carroll",
@@ -43,6 +51,7 @@ module.exports = async function() {
                 "rating": 5,
                 "year": 2024,
                 "link": "/library/alice",
+                "cover_url": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop&crop=center",
                 "description": "A timeless classic that continues to captivate readers with its whimsical characters and imaginative storytelling. Carroll's wordplay and logic puzzles make this a book that rewards multiple readings."
             },
             {
@@ -52,6 +61,7 @@ module.exports = async function() {
                 "rating": 4,
                 "year": 2024,
                 "link": "/library/peterpan",
+                "cover_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=center",
                 "description": "The tale of the boy who wouldn't grow up remains as enchanting today as when it was first written. Barrie's exploration of childhood, imagination, and the inevitable passage of time feels both magical and melancholic."
             },
             {
@@ -61,6 +71,7 @@ module.exports = async function() {
                 "rating": 4,
                 "year": 2024,
                 "link": "/library/atomic-habits",
+                "cover_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=center",
                 "description": "Actually practical advice about building good habits and breaking bad ones. Less fluff than most productivity books."
             },
             {
@@ -70,6 +81,7 @@ module.exports = async function() {
                 "rating": 5,
                 "year": 2024,
                 "link": "/library/design-everyday-things",
+                "cover_url": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=400&h=600&fit=crop&crop=center",
                 "description": "Essential reading for anyone who creates things that people use. Norman's principles of good design are timeless and applicable far beyond traditional product design."
             },
             {
@@ -79,8 +91,19 @@ module.exports = async function() {
                 "rating": 4,
                 "year": 2024,
                 "link": "/library/deep-work",
+                "cover_url": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&h=600&fit=crop&crop=center",
                 "description": "In our age of constant distraction, Newport makes a compelling case for the value of sustained, focused work. The strategies are practical and the philosophy is sound."
             }
         ];
+
+        // Process descriptions in fallback data to handle <br /> tags
+        fallbackData.forEach(book => {
+            if (book.description && typeof book.description === 'string') {
+                // Convert <br /> tags to line breaks
+                book.description = book.description.replace(/<br \/>/g, '\n');
+            }
+        });
+
+        return fallbackData;
     }
 };

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modal with Inset White Shadow</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    button {
+      margin: 100px auto;
+      display: block;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Modal overlay */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    /* Modal box */
+    .modal {
+      position: relative;
+      width: 90%;
+      max-width: 600px;
+      height: 80vh;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+
+      /* Внутренняя белая тень внизу */
+      box-shadow: inset 0 -60px 40px -20px white;
+    }
+
+    /* Header */
+    .modal-header {
+      background: white;
+      color: black;
+      font-weight: bold;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    /* Content */
+    .modal-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="openModal">Open Modal</button>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-header">Modal Header</div>
+      <div class="modal-content">
+        <!-- Много текста -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Suspendisse varius enim in eros elementum tristique.</p>
+        <p>Donec ac lorem non justo tincidunt porta. Sed nec commodo leo.</p>
+        <p>Aliquam erat volutpat. Mauris rhoncus erat non magna aliquet.</p>
+        <p>Morbi tincidunt orci non felis bibendum, nec fermentum erat tincidunt.</p>
+        <p>Fusce sagittis dolor sit amet felis finibus, in ultricies felis tincidunt.</p>
+        <p>Quisque non justo ac justo luctus tincidunt.</p>
+        <p>Nam ut vehicula nisl. In rhoncus fermentum ligula.</p>
+        <p>Vivamus in facilisis tellus, et tristique ligula.</p>
+        <p>Integer nec felis justo. Pellentesque vitae tincidunt sapien.</p>
+        <p>Suspendisse bibendum lorem in metus feugiat.</p>
+        <p>Etiam fringilla tortor a libero tempor.</p>
+        <p>Morbi mattis ligula sit amet nisl finibus.</p>
+        <p>Curabitur tincidunt nibh at sem feugiat.</p>
+        <p>Phasellus at felis ac nisi commodo fringilla.</p>
+        <p>Nam imperdiet lacus vitae tincidunt tempus.</p>
+        <p>Duis nec justo nec sapien feugiat tempor.</p>
+        <p>Vestibulum ante ipsum primis in faucibus.</p>
+        <p>Mauris placerat felis nec purus porta facilisis.</p>
+        <p>Donec volutpat sem sit amet sapien bibendum finibus.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const openBtn = document.getElementById('openModal');
+    const overlay = document.getElementById('modalOverlay');
+
+    openBtn.addEventListener('click', () => {
+      overlay.classList.add('active');
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
+
