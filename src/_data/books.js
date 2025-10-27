@@ -11,7 +11,7 @@ module.exports = async function() {
             fetch = nodeFetch.default;
         }
 
-        const response = await fetch('https://api.alleksy.com/v1/all_books');
+        const response = await fetch('https://api.alleksy.com/v1/all_books/finished');
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
